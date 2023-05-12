@@ -52,3 +52,27 @@ const submit = (e) => {
 const reset = () => {
     location.reload()
 }
+
+const allHints = [
+        "Il a récemment acheter twitter :) !",
+        "Ce n'est pas 1939 - 1945",
+        "Il est le co-foundateur de Firefox.",
+        "Sais-tu ce qu'est un framework ? 🤔",
+        "",
+        "",
+        "",
+        ""
+]
+
+const hintAnswer = (i) => {
+    const textHint =  document.getElementById(`hintText${i}`)
+
+    textHint.innerHTML = allHints[i - 1]
+}
+
+const hideHint = (i) => {
+    const textHint =  document.getElementById(`hintText${i}`)
+    
+    textHint.innerHTML = ''
+
+}

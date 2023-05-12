@@ -14,17 +14,44 @@
 
     <form class="mx-3 my-3">
         <div class="mb-4" >
-          <label class="form-label">Question 1 : Qui a créer Tesla et SpaceX ?</label>
+          <label class="form-label">Question 1 : Qui a créer Tesla et SpaceX ?
+            <svg class="mx-3" onmouseenter="hintAnswer('1')" onmouseleave="hideHint('1')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>  
+          <p class="text-info" id="hintText1"></p>
+          </label>
           <input id="question1" type="text" class="form-control">
         </div>
-        <label class="form-label">Question 2 : Quelles sont les dates de la 1è Guerre mondiale ?</label>
+        <label class="form-label">Question 2 : Quelles sont les dates de la 1è Guerre mondiale ?
+          <svg class="mx-3" onmouseenter="hintAnswer('2')" onmouseleave="hideHint('2')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>  
+          <p class="text-info" id="hintText2"></p>
+
+        </label>
         <select class="form-select mb-4" id="question-2">
         </select>
         <div class="mb-3">
-              <label class="form-label">Question 3 : Qui est le créateur de JavaScript ?</label>
+              <label class="form-label">Question 3 : Qui est le créateur de JavaScript ?
+              <svg class="mx-3" onmouseenter="hintAnswer('3')" onmouseleave="hideHint('3')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>  
+          <p class="text-info" id="hintText3"></p>
+
+              </label>
               <input id="question3" type="text" class="form-control">
         </div>
-        <label class="form-label">Question 4 : Est-ce que React.js est un language de programmation ?</label>
+        <label class="form-label">Question 4 : Est-ce que React.js est un language de programmation ?
+        <svg class="mx-3" onmouseenter="hintAnswer('4')" onmouseleave="hideHint('4')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>  
+          <p class="text-info" id="hintText4"></p>
+
+        </label>
         <select id="question4" class="form-select mb-4 ">
             <option value="1">Oui</option>
             <option value="2">Non</option>
@@ -32,7 +59,14 @@
     </form>
 
     <form class="mx-3 my-3">
-         <label class="form-label">Combien de rayures y a-t-il sur le drapeau américain ?</label>
+         <label class="form-label">Question 5 : Combien de rayures y a-t-il sur le drapeau américain ?
+          <svg class="mx-3" onmouseenter="hintAnswer('5')" onmouseleave="hideHint('5')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>  
+          <p class="text-info" id="hintText5"></p>
+
+         </label>
          <br>
           <input class="form-check-input" type="radio" name="q1" value="16">
             16
@@ -41,7 +75,13 @@
           <input class="form-check-input" type="radio" name="q1" value="15">
             15
         <br>
-        <label class="form-label mt-3">Le caoutchouc peut être produit à partir de sève d'hévéa ?</label>
+          <label class="form-label mt-3 d-flex">Question 6 : Le caoutchouc peut être produit à partir de sève d'hévéa ?<svg class="mx-3" onmouseenter="hintAnswer('6')" onmouseleave="hideHint('6')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            <p class="text-info" id="hintText6"></p>
+
+          </label>
         <br>
            <input class="form-check-input" type="radio" name="q2" value="vrai">
            Vrai
@@ -51,10 +91,23 @@
           </label>
         <br>
         <div class="mb-2" >
-            <label class="form-label mt-3">Quel mot d'argot désignant New York est-il utilisé par la population locale ?</label>
+            <label class="form-label mt-3">Question 7 : Quel mot d'argot désignant New York est-il utilisé par la population locale ? 
+              <svg class="mx-3" onmouseenter="hintAnswer('7')" onmouseleave="hideHint('7')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          <p class="text-info" id="hintText7"></p>
+
+          </label>
             <input placeholder="Reponse.." class="form-control" type="text" name="q3">
         </div>
-        <label class="form-label my-3">Quel pays ne sont-ils pas dans l'Union Européenne ?</label>
+        <label class="form-label my-3">Question 8 : Quel pays ne sont-ils pas dans l'Union Européenne ?         <svg class="mx-3" onmouseenter="hintAnswer('8')" onmouseleave="hideHint('8')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+        </svg>
+        <p class="text-info" id="hintText8"></p>
+
+        </label>
         <br>
         <input class="form-check-input" type="checkbox" name="q4" value="suisse">
         la Suisse
