@@ -37,6 +37,9 @@ const question4 = document.getElementById('question4')
 
 const answerQ4 = 2
 
+
+// Fonction du submit permettant la comparaison des réponses 
+
 let score = 0
 
 const submit = (e) => {
