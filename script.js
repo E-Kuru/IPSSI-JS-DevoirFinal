@@ -48,3 +48,7 @@ const submit = (e) => {
     console.log(question3.value.toLowerCase() === answerQ3);
     console.log(Number(question4.value) === answerQ4);
 }
+
+const reset = () => {
+    location.reload()
+}
