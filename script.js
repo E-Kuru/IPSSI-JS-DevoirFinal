@@ -1,3 +1,5 @@
+// Le code a été fait à deux en LiveSharing / PerProgramming, on a eu des problèmes avec gitHub c'est pourquoi tout le code a été push principalement à travers mon compte gitHub E-Kuru 😁.
+
 // Question 1 
 
 // Reponse de la question 1 
@@ -71,16 +73,32 @@ const question7 = document.getElementById('question7')
 
 const question8 = document.getElementById('question8')
 
-const chooseAnswerQ8 = ["La France", "L'Espagne", "L'Allemagne", "Royaume-Unis"];
+const chooseAnswerQ8 = ["Suisse", "L'Espagne", "L'Allemagne", "Royaume-Unis"];
 
-const answerQ8 = "Royaume-Unis"
+const answerQ8 = ['Royaume-Unis', 'Suisse']
 
 const shuffledQ8 = chooseAnswerQ8.sort(() => 0.5 - Math.random());
 
-var childQ8 = '<option value="0">Any</option>'
+var userAnswer = []
+
+const pushAnswerQ8 = (index) => {
+    if(userAnswer.includes(shuffledQ8[index - 1])){
+        let newuserAnswer = userAnswer.filter( e => e !== shuffledQ8[index - 1])
+        userAnswer = newuserAnswer
+    } else {
+        userAnswer.push(shuffledQ8[index - 1])
+    }
+}
+
+var childQ8 = ''
 
 for(let i = 1; i < shuffledQ8.length + 1; i++){
-    childQ8 += `<option value="${i}">${shuffledQ8[i - 1]}</option>`
+    childQ8 += `
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" onclick=pushAnswerQ8("${i}")>
+        <label class="form-check-label">${shuffledQ8[i - 1]}</label>
+    </div>
+  `
 }
 
 question8.innerHTML = childQ8
@@ -97,7 +115,7 @@ const submit = (e) => {
     question5[question5.value].innerText === answerQ5 ? score += 1 : false
     question6.value === answersQ6? score += 1 : false
     question7.value.toLowerCase() === answerQ7 ? score += 1 : false
-    question8[question8.value].innerText === answerQ8 ? score += 1 : false
+    userAnswer.sort().toString() === answerQ8.toString() ? score += 1 : false
 
     alert(`Bravo vous avez ${score} points !`)
 }
