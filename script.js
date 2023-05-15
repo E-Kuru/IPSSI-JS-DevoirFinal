@@ -14,16 +14,16 @@ const answerQ2 = '1914 - 1918'
 
 const chooseAnswerQ2 = ["1914 - 1918", "1920 - 1925", "1940 - 1945", "1939 - 1945"]
 
-const shuffledArray = chooseAnswerQ2.sort(() => 0.5 - Math.random());
+const shuffledQ2 = chooseAnswerQ2.sort(() => 0.5 - Math.random());
 
-var child = '<option value="0">Any</option>'
+var childQ2 = '<option value="0">Any</option>'
 
 // Initialize le Random de la question 2 
 
-for(let i = 1; i < shuffledArray.length + 1; i++){
-    child += `<option value="${i}">${shuffledArray[i - 1]}</option>`
+for(let i = 1; i < shuffledQ2.length + 1; i++){
+    childQ2 += `<option value="${i}">${shuffledQ2[i - 1]}</option>`
 }
-question2.innerHTML = child
+question2.innerHTML = childQ2
 
 // Question 3 
 
@@ -37,31 +37,107 @@ const question4 = document.getElementById('question4')
 
 const answerQ4 = 2
 
+// Question 5
+
+const question5 = document.getElementById('question5')
+
+const chooseAnswerQ5 = ["13", "16", "15"]
+
+const answerQ5 ='13'
+
+const shuffledQ5 = chooseAnswerQ5.sort(() => 0.5 - Math.random());
+
+var childQ5 = '<option value="0">Any</option>'
+
+for(let i = 1; i < shuffledQ5.length + 1; i++){
+    childQ5 += `<option value="${i}">${shuffledQ5[i - 1]}</option>`
+}
+
+question5.innerHTML = childQ5
+
+// Question 6 
+
+const answersQ6 ='1'
+
+const question6 = document.getElementById('question6')
+
+// Question 7 
+
+const answerQ7 ='gotham'
+
+const question7 = document.getElementById('question7')
+
+// // Question 8 
+
+const question8 = document.getElementById('question8')
+
+const chooseAnswerQ8 = ["La France", "L'Espagne", "L'Allemagne", "Royaume-Unis"];
+
+const answerQ8 = "Royaume-Unis"
+
+const shuffledQ8 = chooseAnswerQ8.sort(() => 0.5 - Math.random());
+
+var childQ8 = '<option value="0">Any</option>'
+
+for(let i = 1; i < shuffledQ8.length + 1; i++){
+    childQ8 += `<option value="${i}">${shuffledQ8[i - 1]}</option>`
+}
+
+question8.innerHTML = childQ8
 
 // Fonction du submit permettant la comparaison des réponses 
 
 let score = 0
 
 const submit = (e) => {
-    console.log(question1.value.toLowerCase() === answerQ1);
-    console.log(question2[question2.value].innerText === answerQ2);
-    console.log(question3.value.toLowerCase() === answerQ3);
-    console.log(Number(question4.value) === answerQ4);
+    question1.value.toLowerCase() === answerQ1 ? score += 1 : false
+    question2[question2.value].innerText === answerQ2 ? score += 1 : false
+    question3.value.toLowerCase() === answerQ3 ? score += 1 : false
+    Number(question4.value) === answerQ4 ? score += 1 : false
+    question5[question5.value].innerText === answerQ5 ? score += 1 : false
+    question6.value === answersQ6? score += 1 : false
+    question7.value.toLowerCase() === answerQ7 ? score += 1 : false
+    question8[question8.value].innerText === answerQ8 ? score += 1 : false
+
+    alert(`Bravo vous avez ${score} points !`)
 }
+
+// Timer 
+
+const timer = document.getElementById('timer')
+
+let time = 300
+
+const setTimer = () => {
+    timer.innerHTML = `${time} s`
+    time--
+    if(time === 0){
+        alert("T'as perdu !")
+        reset()
+    }
+}
+
+setInterval(setTimer, 1000)
+
+// Reset du Quizz
 
 const reset = () => {
     location.reload()
 }
+
+// Indices 
+
+// Tableau d'indices 
 
 const allHints = [
         "Il a récemment acheter twitter :) !",
         "Ce n'est pas 1939 - 1945",
         "Il est le co-foundateur de Firefox.",
         "Sais-tu ce qu'est un framework ? 🤔",
-        "",
-        "",
-        "",
-        ""
+        "Ce n'est pas 12.",
+        "Pas d'indices pour cette question 😋",
+        "Connais-tu Batman ?",
+        "Le drapeau forme une croix !"
 ]
 
 const hintAnswer = (i) => {
